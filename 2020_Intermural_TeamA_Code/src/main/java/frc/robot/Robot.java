@@ -8,6 +8,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.K_constants.RobotMap;
 import frc.robot.Subsystems.DriveTrain;
 import frc.robot.Subsystems.Shooter;
 import frc.robot.Subsystems.TurnTable;
@@ -15,7 +17,14 @@ import frc.robot.Subsystems.TurnTable;
 
 public class Robot extends TimedRobot {
 
-  DriveTrain driveTrain = new DriveTrain();
+  //---------------------Controllers-------------------------
+  XboxController omnicientController = new XboxController(0);
+
+  //------------RobotMap-------------
+  RobotMap omnitientRobotMap = new RobotMap();
+
+  //----------------------------------Subsystems--------------------------------------
+  DriveTrain driveTrain = new DriveTrain(omnicientController);
   Shooter shooter = new Shooter();
   TurnTable turnTable = new TurnTable();
 
