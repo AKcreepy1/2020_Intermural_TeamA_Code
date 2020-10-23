@@ -5,11 +5,14 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot.K_constants;
+package frc.robot.utils;
 
-public class ControllerMap {
 
-    public static final int xJoystickAxis = 0;
-    public static final int yJoystickAxis = 0;
+public class Constants {
+    // talon sensor velocity to RPM. 
+    // (600 [100ms] / 1 [Minute]) * (1 [Rev] / 2047 [Native Encoder Ticks])
+    public static final double kRPMtoCTREEncoderTicksVelocity = 2047.0 / 600.0; // 2047 ticks * 1 min / (1 rev * 60 seconds * 10 [100ms]);
     
+    public static final double kvoltageComp = 11;
+
 }

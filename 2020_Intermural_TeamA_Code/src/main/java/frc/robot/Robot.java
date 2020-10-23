@@ -9,10 +9,9 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
-import frc.robot.K_constants.RobotMap;
+import frc.robot.utils.RobotMap;
 import frc.robot.Subsystems.DriveTrain;
 import frc.robot.Subsystems.Shooter;
-import frc.robot.Subsystems.TurnTable;
 
 
 public class Robot extends TimedRobot {
@@ -25,77 +24,66 @@ public class Robot extends TimedRobot {
 
   //----------------------------------Subsystems--------------------------------------
   DriveTrain driveTrain = new DriveTrain(omnicientController);
-  Shooter shooter = new Shooter();
-  TurnTable turnTable = new TurnTable();
+  Shooter shooter = new Shooter(omnicientController);
 
 
   @Override
   public void robotInit() {
     driveTrain.robotInit();
     shooter.robotInit();
-    turnTable.robotInit();
   }
 
   @Override
   public void robotPeriodic() {
     driveTrain.robotPeriodic();
     shooter.robotPeriodic();
-    turnTable.robotPeriodic();
   }
 
   @Override
   public void autonomousInit() {
     driveTrain.autonomousInit();
     shooter.autonomousInit();
-    turnTable.autonomousInit();
   }
 
   @Override
   public void autonomousPeriodic() {
     driveTrain.autonomousPeriodic();
     shooter.autonomousPeriodic();
-    turnTable.autonomousPeriodic();
   }
 
   @Override
   public void teleopInit() {
     driveTrain.teleopInit();
     shooter.teleopInit();
-    turnTable.teleopInit();
   }
 
   @Override
   public void teleopPeriodic() {
     driveTrain.teleopPeriodic();
     shooter.teleopPeriodic();
-    turnTable.teleopPeriodic();
   }
 
   @Override
   public void disabledInit() {
     driveTrain.disabledInit();
     shooter.disabledInit();
-    turnTable.disabledInit();
   }
 
   @Override
   public void disabledPeriodic() {
     driveTrain.disabledPeriodic();
     shooter.disabledPeriodic();
-    turnTable.disabledPeriodic();
   }
 
   @Override
   public void testInit() {
     driveTrain.testInit();
     shooter.testInit();
-    turnTable.testInit();
   }
 
   @Override
   public void testPeriodic() {
     driveTrain.testPeriodic();
     shooter.testPeriodic();
-    turnTable.testPeriodic();
   }
 }
