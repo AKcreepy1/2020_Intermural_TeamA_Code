@@ -5,16 +5,24 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot.K_constants;
+package frc.robot.utils;
 
 public class RobotMap {
 
     public static class DriveTrainMap {
 
-        public static final int frontRightController = 10;
-        public static final int frontLeftController = 11;
-        public static final int backRightController = 12;
-        public static final int backLeftController = 14;
+        // id's for the TalonSR's which are directly connected to PWM on RoboRio
+        public static final int frontRightID = 0;
+        public static final int backRightID = 1;
 
+        // id's for the TalonSRX's which are on the drive train
+        public static final int frontLeftID = 12;
+        public static final int backLeftID = 13;
+
+    }
+
+    public static class ShooterMap {
+        public static final int topShooterID = 20;
+        public static final int bottomShooterID = 21;
     }
 }
