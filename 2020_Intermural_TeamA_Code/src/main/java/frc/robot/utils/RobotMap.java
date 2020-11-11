@@ -15,14 +15,18 @@ public class RobotMap {
         public static final int frontRightID = 0;
         public static final int backRightID = 1;
 
-        // id's for the TalonSRX's which are on the drive train
+        // id's for the TalonSRX's which are connected to the PDP
         public static final int frontLeftID = 12;
         public static final int backLeftID = 13;
 
     }
 
     public static class ShooterMap {
+        // ids for the top and bottom Motor of the shooter
         public static final int topShooterID = 20;
         public static final int bottomShooterID = 21;
+
+        // id for the feeder motor
+        public static final int feederMotorID = 9;
     }
 }

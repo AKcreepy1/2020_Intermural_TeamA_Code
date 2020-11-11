@@ -15,4 +15,18 @@ public class Constants {
     
     public static final double kvoltageComp = 11;
 
+    // defines close RPM's of top and bottom motors
+    public static final int k_topCloseRPM = 60;
+    public static final int k_bottomCloseRPM = 60;
+
+    // defines medium RPM's of top and bottom motors
+    public static final int k_topMediumRPM = 300;
+    public static final int k_bottomMediumRPM = 60;
+
+    // defines far RPM's of top and bottom motors
+    public static final int k_topFarRPM = 600;
+    public static final int k_bottomFarRPM = 60;
+
+
+
 }
